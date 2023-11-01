@@ -27,8 +27,7 @@ const Home = () => {
       <div className="absolute inset-0 flex items-center justify-center z-10">
         <div className="bg-black bg-opacity-5 p-4 rounded-md">
           <h1 className="text-4xl text-gray-400 font-bold text-center">
-            " Rhonak's Journey: From Proactive Living to Life-Altering Accident
-            to Dialysis "
+            "Rhonak Prasanna: A Story of Resilience and Hope"
           </h1>
         </div>
       </div>

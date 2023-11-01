@@ -12,49 +12,107 @@ const About = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((currentImage + 1) % images.length);
-    }, 3000); // Change the image every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [currentImage, images]);
 
+  const isMobileView = window.innerWidth <= 768;
+
   return (
-    <div className="relative h-screen dark:bg-black">
-      {/* Right section image gallery (for large devices) */}
-      <div className="hidden md:block w-1/2 h-full absolute inset-0">
-        <img
-          src={images[currentImage]}
-          alt="Image"
-          className="w-full h-full object-cover"
-        />
-      </div>
-
-      {/* Left section (title and content) */}
-      <div className="w-4/5 md:w-1/2 mx-auto text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <h1 className="text-2xl font-semibold mb-4 text-center">
-          About Me - Introduction
-        </h1>
-        <p className="text-center">
-          Your introduction and some personal information go here. Write a
-          compelling story about yourself.
-        </p>
-      </div>
-
-      {/* Right section image gallery (for mobile devices) */}
-      {window.innerWidth <= 768 && (
-        <div className="md:hidden w-full h-full absolute inset-0">
+    <div className={`relative h-screen ${isMobileView ? "dark:bg-black" : ""}`}>
+      {isMobileView ? (
+        // Mobile view
+        <div className="w-full h-screen relative">
           <img
             src={images[currentImage]}
             alt="Image"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
+          <div className="absolute top-0 left-0 right-0 bottom-0 text-white text-center flex justify-center items-center">
+            <div className="max-w-screen-md mx-auto bg-opacity-70 p-4">
+              <h1 className="text-2xl font-semibold mb-4">
+                About Me - Introduction
+              </h1>
+              <p className="bg-opacity-80 text-justify mb-2">
+                "Meet Rhonak, a 21-year-old adventurer hailing from the serene
+                city of Mangalore. He possesses an unquenchable spirit that's
+                more than a thirst for life; it's a fiery determination that
+                blazes through every challenge. To Rhonak, every challenge is
+                just another stepping stone on the path of life's grand journey.
+              </p>
+              <p className="bg-opacity-80 text-justify mb-2">
+                What truly sets Rhonak apart is not just his zest for adventure
+                but his boundless positivity, relentless curiosity, and a
+                genuine love for fun. Life, to him, isn't just about reaching
+                destinations; it's about the captivating stories he collects
+                along the way. With a Bachelor's degree in Computer Applications
+                from Alvas College, Rhonak brings a touch of brilliance to every
+                adventure. He's not just an explorer; he's also a vlogging
+                sensation, masterfully capturing the vibrant moments that life
+                offers.
+              </p>
+              <p className="bg-opacity-80 text-justify mb-2">
+                And then, life took an unexpected turn. As he was embarking on a
+                new chapter, recently started in a job in Pune, Rhonak decided
+                to return to Mangalore to nurture the next generation of tech
+                enthusiasts by conducting an IoT internship for Alvas BCA
+                juniors.
+              </p>
+              <p className="bg-opacity-80 text-justify">
+                But then, one fateful day, just as he was set to return to Pune,
+                Rhonak's world was gently and irrevocably altered by a
+                life-altering bike accident."
+              </p>
+            </div>
+          </div>
+        </div>
+      ) : (
+        // Desktop view
+        <div className="flex h-screen">
+          {/* Left section (title and content) */}
+          <div className="w-1/2 flex flex-col justify-center bg-black text-white p-8">
             <h1 className="text-2xl font-semibold mb-4">
               About Me - Introduction
             </h1>
-            <p>
-              Your introduction and some personal information go here. Write a
-              compelling story about yourself.
+            <p className="bg-opacity-80 text-justify mb-2">
+              "Meet Rhonak, a 21-year-old adventurer hailing from the serene
+              city of Mangalore. He possesses an unquenchable spirit that's more
+              than a thirst for life; it's a fiery determination that blazes
+              through every challenge. To Rhonak, every challenge is just
+              another stepping stone on the path of life's grand journey.
             </p>
+            <p className="bg-opacity-80 text-justify mb-2">
+              What truly sets Rhonak apart is not just his zest for adventure
+              but his boundless positivity, relentless curiosity, and a genuine
+              love for fun. Life, to him, isn't just about reaching
+              destinations; it's about the captivating stories he collects along
+              the way. With a Bachelor's degree in Computer Applications from
+              Alvas College, Rhonak brings a touch of brilliance to every
+              adventure. He's not just an explorer; he's also a vlogging
+              sensation, masterfully capturing the vibrant moments that life
+              offers.
+            </p>
+            <p className="bg-opacity-80 text-justify mb-2">
+              And then, life took an unexpected turn. As he was embarking on a
+              new chapter, recently started in a job in Pune, Rhonak decided to
+              return to Mangalore to nurture the next generation of tech
+              enthusiasts by conducting an IoT internship for Alvas BCA juniors.
+            </p>
+            <p className="bg-opacity-80 text-justify">
+              But then, one fateful day, just as he was set to return to Pune,
+              Rhonak's world was gently and irrevocably altered by a
+              life-altering bike accident."
+            </p>
+          </div>
+
+          {/* Right section image gallery (for large devices) */}
+          <div className="hidden md:w-1/2 md:block h-full">
+            <img
+              src={images[currentImage]}
+              alt="Image"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       )}
