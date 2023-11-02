@@ -18,13 +18,13 @@ const AboutMe = () => {
   }, [currentImage, images]);
 
   return (
-    <div className="aboutMe bg-black w-screen h-screen flex justify-between  text-white">
+    <div className="aboutMe bg-black w-full h-screen flex justify-between  text-white">
       <img
         src={images[currentImage]}
         alt="Image"
         className="w-full h-full object-cover absolute lg:hidden opacity-30"
       />
-      <div className="relative div left_section lg:w-1/2 flex flex-col justify-center m-4 p-4 gap-4">
+      <div className="relative left_section lg:w-1/2 flex flex-col justify-center m-4 p-4 gap-4">
         <h1 className="text-2xl font-semibold">About Me - Introduction</h1>
         <div className=" overflow-auto flex flex-col gap-4 ">
           <p className="">
