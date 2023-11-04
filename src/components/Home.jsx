@@ -1,5 +1,5 @@
 import React from "react";
-import { FaYoutube, FaFacebook } from "react-icons/fa";
+import { FaYoutube, FaInstagram, FaPhone } from "react-icons/fa";
 import IntroVideo from "../assets/IntroVideo.mp4";
 
 const Home = () => {
@@ -26,25 +26,31 @@ const Home = () => {
       {/* Text Field in the Center */}
       <div className="absolute inset-0 flex items-center justify-center z-10">
         <div className="bg-black bg-opacity-5 p-4 rounded-md">
-          <h1 className="text-4xl text-gray-400 font-bold text-center">
+          <h1 className="text-4xl text-gray-400 text-center">
             "Rhonak Prasanna: A Story of Resilience and Hope"
           </h1>
         </div>
       </div>
 
       {/* Social Media Buttons at Bottom Right */}
-      <div className="absolute bottom-4 right-4 z-10 space-x-4">
+      <div className="absolute flex flex-col justify-center items-center top-4 right-4 z-10 space-y-4 ">
         <button
-          className="text-2xl text-white hover:text-red-900"
+          className=" text-2xl text-white hover:text-blue-500"
+          onClick={handleFacebookClick}
+        >
+          <FaPhone />
+        </button>
+        <button
+          className="text-2xl text-white hover:text-red-500"
           onClick={handleYoutubeClick}
         >
           <FaYoutube />
         </button>
         <button
-          className="text-2xl text-white hover:text-blue-900"
+          className="text-2xl text-white hover:text-pink-500"
           onClick={handleFacebookClick}
         >
-          <FaFacebook />
+          <FaInstagram />
         </button>
       </div>
 

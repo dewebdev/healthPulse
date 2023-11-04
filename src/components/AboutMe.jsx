@@ -21,12 +21,14 @@ const AboutMe = () => {
     <div className="aboutMe bg-black w-full h-screen flex justify-between  text-white">
       <img
         src={images[currentImage]}
-        alt="Image"
+        alt="rhonak_images"
         className="w-full h-full object-cover absolute lg:hidden opacity-30"
       />
       <div className="relative left_section lg:w-1/2 flex flex-col justify-center m-4 p-4 gap-4">
-        <h1 className="text-2xl font-semibold">About Me - Introduction</h1>
-        <div className=" overflow-auto flex flex-col gap-4 ">
+        <h1 className="text-2xl font-semibold font-Kenia">
+          About Me - Introduction
+        </h1>
+        <div className=" overflow-auto flex flex-col gap-4 font-Playpensans ">
           <p className="">
             "Meet Rhonak, a 21-year-old adventurer hailing from the serene city
             of Mangalore. He possesses an unquenchable spirit that's more than a
@@ -60,7 +62,7 @@ const AboutMe = () => {
       <div className="hidden lg:flex right_section w-1/2 opacity-80">
         <img
           src={images[currentImage]}
-          alt="Image"
+          alt="rhonak_images"
           className="w-full h-full object-cover"
         />
       </div>
