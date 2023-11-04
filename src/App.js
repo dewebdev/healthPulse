@@ -1,4 +1,5 @@
 import AboutMe from "./components/AboutMe";
+import Accident from "./components/Accident";
 import Home from "./components/Home";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <Home />
       <AboutMe />
+      <Accident />
     </div>
   );
 }
