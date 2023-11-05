@@ -1,5 +1,5 @@
 import AboutMe from "./components/AboutMe";
-import Accident from "./components/Accident";
+import DiagnosisAndAccident from "./components/DiagnosisAndAccident";
 import ChallengingMoments from "./components/ChallengingMoments";
 import Home from "./components/Home";
 
@@ -8,7 +8,7 @@ function App() {
     <div className="App font-ShadowsIntoLight">
       <Home />
       <AboutMe />
-      <Accident />
+      <DiagnosisAndAccident />
       <ChallengingMoments />
     </div>
   );

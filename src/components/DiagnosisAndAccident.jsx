@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf"; // Import components from react-pdf
 import pdfFile from "../assets/sample.pdf";
 
-const Accident = () => {
+const DiagnosisAndAccident = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const images = [
     "https://images.unsplash.com/photo-1581456495146-65a71b2c8e52?auto.format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aHVtYW58ZW58MHx8MHx8fDA%3D",
@@ -148,4 +148,4 @@ const Accident = () => {
   );
 };
 
-export default Accident;
+export default DiagnosisAndAccident;
