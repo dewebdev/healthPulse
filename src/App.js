@@ -1,5 +1,6 @@
 import AboutMe from "./components/AboutMe";
 import Accident from "./components/Accident";
+import ChallengingMoments from "./components/ChallengingMoments";
 import Home from "./components/Home";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Home />
       <AboutMe />
       <Accident />
+      <ChallengingMoments />
     </div>
   );
 }

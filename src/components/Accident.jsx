@@ -42,7 +42,7 @@ const Accident = () => {
   const handleResize = () => {
     // Update page width based on screen width
     if (window.innerWidth < 768) {
-      setPageWidth(375); // Adjust width for smaller screens
+      setPageWidth(355); // Adjust width for smaller screens
     } else {
       setPageWidth(740); // Default width for larger screens
     }
@@ -127,7 +127,7 @@ const Accident = () => {
       </div>
       {isPdfOpen && (
         <div className="pdf-iframe absolute lg:w-1/2 w-screen h-screen overflow-auto ">
-          <div className=" flex flex-col text-black  ">
+          <div className=" flex flex-col text-black ">
             {/* Use Tailwind CSS classes to center the PDF viewer */}
             <button
               onClick={closePdf}
