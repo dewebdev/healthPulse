@@ -21,6 +21,7 @@ const Accident = () => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [isPdfOpen, setIsPdfOpen] = useState(false);
+  const [pageWidth, setPageWidth] = useState(null);
 
   const openPdf = () => {
     setIsPdfOpen(true);
@@ -37,6 +38,23 @@ const Accident = () => {
     link.download = "Old Medical Report";
     link.click();
   };
+
+  const handleResize = () => {
+    // Update page width based on screen width
+    if (window.innerWidth < 768) {
+      setPageWidth(375); // Adjust width for smaller screens
+    } else {
+      setPageWidth(740); // Default width for larger screens
+    }
+  };
+
+  useEffect(() => {
+    handleResize(); // Set initial page width
+    window.addEventListener("resize", handleResize); // Listen for screen size changes
+    return () => {
+      window.removeEventListener("resize", handleResize); // Remove event listener on unmount
+    };
+  }, []);
 
   pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
@@ -108,19 +126,22 @@ const Accident = () => {
         </button>
       </div>
       {isPdfOpen && (
-        <div className="pdf-iframe absolute w-screen lg:w-1/2 h-full overflow-auto">
-          <button
-            onClick={closePdf}
-            className="bg-red-500 text-white px-4 py-2 rounded w-full  top-0  z-10 sticky"
-          >
-            Close PDF
-          </button>
-          <Document
-            file={pdfFile}
-            onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-          >
-            <Page pageNumber={pageNumber} width={400} />
-          </Document>
+        <div className="pdf-iframe absolute lg:w-1/2 w-screen h-screen overflow-auto ">
+          <div className=" flex flex-col text-black  ">
+            {/* Use Tailwind CSS classes to center the PDF viewer */}
+            <button
+              onClick={closePdf}
+              className="bg-red-500 text-white px-4 py-2 rounded w-full top-0  z-10 sticky"
+            >
+              Close PDF
+            </button>
+            <Document
+              file={pdfFile}
+              onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+            >
+              <Page pageNumber={pageNumber} width={pageWidth} />
+            </Document>
+          </div>
         </div>
       )}
     </div>
