@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
+import img1 from "../assets/img1.jpg";
+import img2 from "../assets/img2.jpg";
+import img3 from "../assets/img3.jpg";
 
 const AboutMe = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  const images = [
-    "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1461800919507-79b16743b257?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aHVtYW58ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1581456495146-65a71b2c8e52?auto.format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aHVtYW58ZW58MHx8MHx8fDA%3D",
-    // Add more image URLs here
-  ];
+  const images = [img1, img2, img3];
 
   useEffect(() => {
     const interval = setInterval(() => {
