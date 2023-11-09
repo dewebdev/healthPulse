@@ -20,21 +20,12 @@ const ContactPage = () => {
           <h3 className="text-xl font-bold mb-2">Contact Information</h3>
           <p>
             Email:{" "}
-            <span className="text-blue-500">[Insert Your Email Address]</span>
-          </p>
-          <p>
-            Phone:{" "}
-            <span className="text-blue-500">[Insert Your Phone Number]</span>
-          </p>
-          <p>
-            Address:{" "}
-            <span className="text-blue-500">[Insert Your Mailing Address]</span>
-          </p>
-          <p>
-            Social Media:{" "}
-            <span className="text-blue-500">
-              [Insert Your Social Media Profiles]
-            </span>
+            <a
+              href="mailto:rhonakshine+support@gmail.com"
+              className="text-blue-500"
+            >
+              Click Here To Mail Me
+            </a>
           </p>
         </div>
 

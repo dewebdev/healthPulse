@@ -5,7 +5,7 @@ import React from "react";
 const FinancialBreakdown = () => {
   return (
     <div className="container mx-auto p-4 font-Playpensans ">
-      <h2 className="text-3xl font-bold mb-8 text-center font-ShadowsIntoLight">
+      <h2 className="text-3xl font-bold mt-8 text-center font-ShadowsIntoLight">
         Financial Breakdown
       </h2>
 
@@ -48,7 +48,7 @@ const monthlyCosts = [
   { label: "Dialysis (12 sessions)", value: "₹18,720" },
   { label: "Dialyzer change (every 10 days)", value: "₹3,600" },
   { label: "Medication", value: "₹15,000" },
-  { label: "Injection (weekly)", value: "₹9,200" },
+  { label: "Injection (Monthly)", value: "₹9,200" },
   { label: "Blood tests and diagnostics", value: "₹7,000" },
 ];
 

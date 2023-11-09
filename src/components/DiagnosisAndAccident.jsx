@@ -96,12 +96,7 @@ const DiagnosisAndAccident = () => {
             nerve damage, bringing Rhonak a lot of pain, which he had to bear
             without painkillers because of his kidney condition.
           </p>
-          <p className="">
-            And then, life threw another curveball. Even though he just started
-            a job in Pune, Rhonak decided to go back to Mangalore. He wanted to
-            help the next generation of tech enthusiasts by running an IoT
-            internship for Alvas BCA juniors.
-          </p>
+          
           <p className="">
             The doctors told him to take it easy for two months to heal. The
             accident, though unexpected and painful, turned out to be a crucial

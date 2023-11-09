@@ -4,11 +4,21 @@ import IntroVideo from "../assets/IntroVideo.mp4";
 
 const Home = () => {
   const handleYoutubeClick = () => {
-    // Handle the click event for the YouTube link here
+    // Open YouTube link in a new tab
+    window.open("https://www.youtube.com/@rhonak", "_blank");
   };
 
-  const handleFacebookClick = () => {
-    // Handle the click event for the Facebook link here
+  const handleInstagramClick = () => {
+    // Open Instagram link in a new tab
+    window.open(
+      "https://www.instagram.com/rhonak/?utm_source=qr&igshid=MXUycm8xdjBrcTVmcw%3D%3D",
+      "_blank"
+    );
+  };
+
+  const handlePhoneClick = () => {
+    // Trigger a phone call
+    window.location.href = "tel:+919663649577"; // Replace with your phone number
   };
 
   return (
@@ -36,7 +46,7 @@ const Home = () => {
       <div className="absolute flex flex-col justify-center items-center top-4 right-4 z-10 space-y-4 ">
         <button
           className=" text-2xl text-white hover:text-blue-500"
-          onClick={handleFacebookClick}
+          onClick={handlePhoneClick}
         >
           <FaPhone />
         </button>
@@ -48,7 +58,7 @@ const Home = () => {
         </button>
         <button
           className="text-2xl text-white hover:text-pink-500"
-          onClick={handleFacebookClick}
+          onClick={handleInstagramClick}
         >
           <FaInstagram />
         </button>
