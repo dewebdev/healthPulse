@@ -27,7 +27,7 @@ const AboutMe = () => {
       <img
         src={images[currentImage]}
         alt="rhonak_images"
-        className="w-full h-full object-cover absolute lg:hidden opacity-30"
+        className="w-full h-screen object-cover absolute lg:hidden opacity-30"
       />
       <div className="relative left_section lg:w-1/2 flex flex-col justify-center m-4 p-4 gap-4">
         <h1 className="text-2xl font-bold font-Playpensans">
