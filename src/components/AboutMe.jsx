@@ -2,10 +2,17 @@ import React, { useState, useEffect } from "react";
 import img1 from "../assets/img1.jpg";
 import img2 from "../assets/img2.jpg";
 import img3 from "../assets/img3.jpg";
+import img4 from "../assets/img4.jpg";
+import img5 from "../assets/img5.jpg";
+import img6 from "../assets/img6.jpg";
+import img7 from "../assets/img7.jpg";
+import img8 from "../assets/img8.jpg";
+import img9 from "../assets/img9.jpg";
+import img10 from "../assets/img10.jpg";
 
 const AboutMe = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  const images = [img1, img2, img3];
+  const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,37 +30,35 @@ const AboutMe = () => {
         className="w-full h-full object-cover absolute lg:hidden opacity-30"
       />
       <div className="relative left_section lg:w-1/2 flex flex-col justify-center m-4 p-4 gap-4">
-        <h1 className="text-2xl font-semibold font-Kenia">
+        <h1 className="text-2xl font-bold font-Playpensans">
           About Me - Introduction
         </h1>
         <div className=" overflow-auto flex flex-col gap-4 font-Playpensans ">
           <p className="">
-            "Meet Rhonak, a 21-year-old adventurer hailing from the serene city
-            of Mangalore. He possesses an unquenchable spirit that's more than a
-            thirst for life; it's a fiery determination that blazes through
-            every challenge. To Rhonak, every challenge is just another stepping
-            stone on the path of life's grand journey.
+            Meet Rhonak, a 21-year-old adventurer from the peaceful city of
+            Mangalore. He's got an unstoppable spirit, like a fierce
+            determination that helps him tackle any challenge that comes his
+            way. For Rhonak, challenges are just steps on the journey of life.
           </p>
           <p className="">
-            What truly sets Rhonak apart is not just his zest for adventure but
-            his boundless positivity, relentless curiosity, and a genuine love
-            for fun. Life, to him, isn't just about reaching destinations; it's
-            about the captivating stories he collects along the way. With a
+            What makes Rhonak special isn't just his love for adventure, but
+            also his endless positivity, constant curiosity, and a real passion
+            for having fun. To him, life isn't just about reaching goals; it's
+            about collecting amazing stories along the way. Rhonak has a
             Bachelor's degree in Computer Applications from Alvas College,
-            Rhonak brings a touch of brilliance to every adventure. He's not
-            just an explorer; he's also a vlogging sensation, masterfully
-            capturing the vibrant moments that life offers.
+            bringing some smarts to all his adventures.
           </p>
           <p className="">
-            And then, life took an unexpected turn. As he was embarking on a new
-            chapter, recently started in a job in Pune, Rhonak decided to return
-            to Mangalore to nurture the next generation of tech enthusiasts by
-            conducting an IoT internship for Alvas BCA juniors.
+            He's not just an explorer; he's also a popular vlogger, capturing
+            the exciting moments life throws at him. But then, life threw a
+            curveball. Even though he had just started a job in Pune, Rhonak
+            decided to go back to Mangalore.
           </p>
           <p className="">
-            But then, one fateful day, just as he was set to return to Pune,
-            Rhonak's world was gently and irrevocably altered by a life-altering
-            bike accident."
+            He wanted to help the next generation of tech enthusiasts by running
+            an IoT internship for Alvas BCA juniors. And then, everything
+            changed. Right when he was about to head back to Pune, Rhonak's
+            world was completely transformed by a life-changing bike accident.
           </p>
         </div>
       </div>

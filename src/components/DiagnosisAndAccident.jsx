@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf"; // Import components from react-pdf
 import pdfFile from "../assets/sample.pdf";
+import hospitalimg2 from "../assets/hospitalimg2.jpeg";
+import hospitalimg3 from "../assets/hospitalimg3.jpg";
 
 const DiagnosisAndAccident = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  const images = [
-    "https://images.unsplash.com/photo-1581456495146-65a71b2c8e52?auto.format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aHVtYW58ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1461800919507-79b16743b257?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aHVtYW58ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D",
-  ];
+  const images = [hospitalimg2, hospitalimg3];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -73,45 +71,45 @@ const DiagnosisAndAccident = () => {
         className="w-full h-full object-cover absolute lg:hidden opacity-30"
       />
       <div className="relative right_section lg:w-1/2 flex flex-col justify-center m-4 p-4 gap-4 ">
-        <h1 className="text-2xl font-Kenia">Revelation after the Accident</h1>
-        <div className="overflow-auto flex flex-col gap-4 font-Playpen font-Playpensans">
+        <h1 className="text-2xl font-Playpensans font-bold">
+          Revelation after the Accident
+        </h1>
+        <div className="overflow-auto  flex flex-col gap-4 font-Playpen font-Playpensans">
           <p className="">
-            "Following the accident, he was rushed to KMC Hospital in Mangalore,
-            medical assessments revealed a critical condition that would forever
-            alter his life. His creatinine level had spiked to a staggering 9.5,
-            a level that was nothing short of critical. It was a shock, and it
-            led to further investigations. What we discovered was both
-            surprising and, in a way, a blessing in disguise. The accident
-            hadn't damaged his kidneys, but it had uncovered a lifelong
-            challenge."
+            After the accident, Rhonak got rushed to KMC Hospital in Mangalore.
+            The doctors found out something serious that would change his life
+            forever. His creatinine level shot up to 9.5, which is really bad.
+            It was a shock, and they had to dig deeper to figure out what was
+            going on. Surprisingly, the accident didn't hurt his kidneys, but it
+            uncovered a lifelong problem.
           </p>
           <p className="">
-            "Rhonak had been living with abnormally small kidneys since birth.
-            As he grew, his kidneys struggled to cope with the demands of his
-            adult body, ultimately leading to kidney failure. The accident,
-            painful as it was, became the turning point. Without it, we might
-            never have known about this hidden condition until it was too late.
-            It's a stark reminder that sometimes life's challenges, while
-            excruciating, reveal deeper truths. Rhonak, a fit and proactive
-            individual, had carried this hidden burden, showing that appearances
-            can often be deceiving. In addition to the kidney diagnosis, the
-            accident also caused some minor spine fractures and nerve damage,
-            resulting in agonizing pain that Rhonak endured without painkillers
-            due to his CKD condition."
+            Turns out, Rhonak had small kidneys from the time he was born. As he
+            grew up, his kidneys couldn't handle the needs of his adult body,
+            and that led to kidney failure. The accident, painful as it was,
+            turned out to be a silver lining. If it hadn't happened, they might
+            not have known about this issue until it was too late. It's a
+            reminder that life's challenges, even though they hurt, sometimes
+            reveal important truths. Rhonak, who seemed fit and active, had been
+            carrying this hidden problem. It goes to show that looks can be
+            deceiving. The accident also caused some small spine fractures and
+            nerve damage, bringing Rhonak a lot of pain, which he had to bear
+            without painkillers because of his kidney condition.
           </p>
           <p className="">
-            "And then, life took an unexpected turn. As he was embarking on a
-            new chapter, recently started in a job in Pune, Rhonak decided to
-            return to Mangalore to nurture the next generation of tech
-            enthusiasts by conducting an IoT internship for Alvas BCA juniors."
+            And then, life threw another curveball. Even though he just started
+            a job in Pune, Rhonak decided to go back to Mangalore. He wanted to
+            help the next generation of tech enthusiasts by running an IoT
+            internship for Alvas BCA juniors.
           </p>
           <p className="">
-            "He was advised to be on bed rest for two months to heal. The
-            accident, while unforeseen and painful, served as a critical moment
-            of revelation and the start of a remarkable journey of resilience
-            and transformation."
+            The doctors told him to take it easy for two months to heal. The
+            accident, though unexpected and painful, turned out to be a crucial
+            moment that revealed a lot and marked the beginning of a remarkable
+            journey of resilience and transformation.
           </p>
         </div>
+
         <button
           onClick={openPdf}
           className="bg-blue-500   text-white px-4 py-2 rounded"
