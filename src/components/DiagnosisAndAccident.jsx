@@ -131,7 +131,7 @@ const DiagnosisAndAccident = () => {
             {/* Use Tailwind CSS classes to center the PDF viewer */}
             <button
               onClick={closePdf}
-              className="bg-red-500 text-white px-4 py-2 rounded w-full top-0  z-10 sticky"
+              className="bg-red-500 text-white px-4 py-2  w-full top-0  z-10 sticky"
             >
               Close PDF
             </button>

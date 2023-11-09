@@ -16,7 +16,7 @@ const ChallengingMoments = () => {
   };
 
   return (
-    <div className=" p-8  shadow-md bg-black text-gray-300 h-screen w-screen overflow-auto">
+    <div className=" p-8  shadow-md bg-black text-gray-300 h-screen w-full overflow-auto">
       <h2 className="text-3xl font-Kenia mb-4">
         A Critical Turn in the Journey
       </h2>
