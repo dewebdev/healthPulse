@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf"; // Import components from react-pdf
-import pdfFile from "../assets/sample.pdf";
+import pdfFile from "../assets/pre-dialysis.pdf";
 import hospitalimg2 from "../assets/hospitalimg2.jpeg";
 import hospitalimg3 from "../assets/hospitalimg3.jpg";
 
@@ -96,7 +96,7 @@ const DiagnosisAndAccident = () => {
             nerve damage, bringing Rhonak a lot of pain, which he had to bear
             without painkillers because of his kidney condition.
           </p>
-          
+
           <p className="">
             The doctors told him to take it easy for two months to heal. The
             accident, though unexpected and painful, turned out to be a crucial
@@ -132,7 +132,13 @@ const DiagnosisAndAccident = () => {
               file={pdfFile}
               onLoadSuccess={({ numPages }) => setNumPages(numPages)}
             >
-              <Page pageNumber={pageNumber} width={pageWidth} />
+              {[...Array(numPages)].map((_, index) => (
+                <Page
+                  key={`page_${index + 1}`}
+                  pageNumber={index + 1}
+                  width={pageWidth}
+                />
+              ))}
             </Document>
           </div>
         </div>

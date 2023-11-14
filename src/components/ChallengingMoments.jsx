@@ -5,9 +5,6 @@ import hospitalimg1 from "../assets/hospitalimg1.jpeg";
 const ChallengingMoments = () => {
   const [isModalOpen, setModalOpen] = useState(false);
 
-  // PDF URL or path
-  const pdfSrc = "/path-to-your-pdf-file.pdf"; // Replace with your PDF file's path
-
   const openModal = () => {
     setModalOpen(true);
   };
@@ -72,7 +69,7 @@ const ChallengingMoments = () => {
       </button>
       {/* Include the content you provided here */}
       {/* Render the Modal component */}
-      <Modal isOpen={isModalOpen} toggleModal={closeModal} pdfSrc={pdfSrc} />
+      <Modal isOpen={isModalOpen} toggleModal={closeModal} />
     </div>
   );
 };

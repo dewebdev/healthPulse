@@ -1,6 +1,7 @@
 import React from "react";
+import pdfFile from "../assets/pre-dialysis.pdf";
 
-const Modal = ({ isOpen, toggleModal, pdfSrc }) => {
+const Modal = ({ isOpen, toggleModal }) => {
   if (!isOpen) return null;
 
   return (
@@ -14,7 +15,7 @@ const Modal = ({ isOpen, toggleModal, pdfSrc }) => {
         </button>
         <iframe
           title="PDF Report"
-          src={pdfSrc}
+          src={pdfFile}
           className="w-full h-full"
         ></iframe>
       </div>
