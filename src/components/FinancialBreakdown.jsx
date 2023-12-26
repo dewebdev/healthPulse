@@ -31,7 +31,7 @@ const FinancialBreakdown = () => {
 				</div>
 				{/* Total of Selected Monthly Costs */}
 				<div className='mt-10 text-xl font-bold text-center font-ShadowsIntoLight text-teal-500'>
-					Total Monthly Costs: ₹{monthlyTotal}
+					Total approx Monthly Costs: ₹{monthlyTotal}
 				</div>
 			</div>
 
