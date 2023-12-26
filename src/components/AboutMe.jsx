@@ -27,6 +27,10 @@ const AboutMe = () => {
 		setShowFullText(!showFullText);
 	};
 
+	const toggleReadLess = () => {
+		setShowFullText(false);
+	};
+
 	return (
 		<div
 			id='about'
@@ -41,7 +45,7 @@ const AboutMe = () => {
 				<h1 className='text-2xl font-bold font-Playpensans text-teal-500'>
 					About Me - Introduction
 				</h1>
-				<div className='overflow-auto flex flex-col gap-4 font-Playpensans '>
+				<div className='overflow-auto flex flex-col gap-4 '>
 					{showFullText ? (
 						<>
 							<p className=''>
@@ -72,6 +76,12 @@ const AboutMe = () => {
 								Pune, Rhonak's world was completely transformed by a
 								life-changing bike accident.
 							</p>
+							<button
+								className='text-blue-500 cursor-pointer'
+								onClick={toggleReadLess}
+							>
+								Read Less
+							</button>
 						</>
 					) : (
 						<>

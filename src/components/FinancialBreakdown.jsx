@@ -11,7 +11,7 @@ const FinancialBreakdown = () => {
 	);
 
 	return (
-		<div className='container mx-auto p-4 font-Playpensans '>
+		<div className='container mx-auto p-4 '>
 			<h2 className='text-3xl font-bold mt-8 text-center font-ShadowsIntoLight text-teal-500'>
 				Financial Breakdown
 			</h2>

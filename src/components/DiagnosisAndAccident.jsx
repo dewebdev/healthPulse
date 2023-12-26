@@ -73,7 +73,7 @@ const DiagnosisAndAccident = () => {
 				<h1 className='text-2xl font-Playpensans font-bold text-teal-500'>
 					Revelation after the Accident
 				</h1>
-				<div className='overflow-auto flex flex-col gap-4 font-Playpen font-Playpensans'>
+				<div className='overflow-auto flex flex-col gap-4 '>
 					{readMore ? (
 						<>
 							{/* Full content here */}

@@ -14,7 +14,7 @@ const ChallengingMoments = () => {
 	};
 
 	return (
-		<div className='flex flex-col lg:flex-row lg:gap-10 h-full lg:h-screen w-full font-Playpensans  shadow-md bg-black text-gray-300 p-5 '>
+		<div className='flex flex-col lg:flex-row lg:gap-10 h-full lg:h-screen w-full shadow-md bg-black text-gray-300 p-5 '>
 			<h2 className='text-3xl font-Playpensans mb-4 font-bold text-teal-500 '>
 				A Critical Turn in the Journey
 			</h2>

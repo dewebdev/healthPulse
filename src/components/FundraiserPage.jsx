@@ -3,7 +3,7 @@ import QRCodeImage from '../assets/qr.png'; // Replace with the actual path to y
 
 const FundraiserPage = () => {
 	return (
-		<div className='h-full m-5 font-Playpensans text-center'>
+		<div className='h-full m-5 text-center'>
 			<h2 className='text-3xl font-bold mb-8 mt-8 text-center font-ShadowsIntoLight text-teal-500'>
 				Fundraiser
 			</h2>
