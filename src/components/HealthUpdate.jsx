@@ -10,7 +10,7 @@ const HealthUpdate = () => {
 				<p>
 					As we journey through this challenging phase, I want to provide you
 					with an update on Rhonak's current status and treatment. His
-					creatinine level now stands at a staggering 12.9, and his hemoglobin
+					creatinine level now stands at a staggering 16.5, and his hemoglobin
 					levels have dipped.
 				</p>
 				<p>
